@@ -1,0 +1,76 @@
+# =============================================================
+# .gitignore — gis-electrical-network-modeling
+# =============================================================
+
+# ── Datos sensibles — NUNCA subir ────────────────────────────
+*.gdb/
+*.mxd
+*.msd
+*.aprx
+*.sde
+*.gdb
+
+# Shapefiles con datos reales
+*.shp
+*.dbf
+*.shx
+*.prj
+*.sbn
+*.sbx
+*.cpg
+*.shp.xml
+
+# Tablas con datos de empresa
+*.xls
+*.xlsx
+*.csv
+*.dbf
+
+# CAD / planos
+*.dwg
+*.dxf
+
+# Rasters / imágenes con coordenadas reales
+*.tif
+*.tiff
+*.img
+*.ecw
+*.sid
+
+# Archivos de proyecto con rutas locales
+*.lyr
+*.lyrx
+*.style
+*.stylx
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# ── Sistema operativo ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ── Temporales ────────────────────────────────────────────────
+*.tmp
+*.bak
+*.swp
+~$*
+*.log
