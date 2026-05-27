@@ -14,11 +14,7 @@ GIS workflow focused on electrical network modeling, connectivity validation, to
 
 ---
 
-# 📌 Project Overview
-
-This project demonstrates the complete GIS workflow for electrical network modeling using ArcGIS and Geometric Network.
-
-The work includes:
+This project demonstrates:
 
 - Electrical network spatial modeling
 - Geometric Network construction
@@ -27,16 +23,16 @@ The work includes:
 - Spatial QA/QC
 - Attribute normalization
 - Error detection and correction
-- GIS data management and validation
+- GIS data management workflows
 
 ---
 
-# 🖼️ Project Screenshots
+# 🖼️ Screenshots
 
 ## 🔌 Geometric Network Overview
 
 <p align="center">
-  <img src="assets/01-geometric-network-view.svg" width="1000"/>
+  <img src="./assets/01-geometric-network-view.jpg" width="1000">
 </p>
 
 ---
@@ -44,7 +40,7 @@ The work includes:
 ## ⚡ BUILDERR Validation Table
 
 <p align="center">
-  <img src="assets/02-builder-table.svg" width="1000"/>
+  <img src="./assets/02-builder-table.jpg" width="1000">
 </p>
 
 ---
