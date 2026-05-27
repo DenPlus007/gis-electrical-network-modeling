@@ -27,20 +27,22 @@ This project demonstrates:
 
 ---
 
-# 🖼️ Screenshots
+# 🔌 Geometric Network Overview
 
-## 🔌 Geometric Network Overview
+Visualization of the electrical infrastructure modeled inside ArcGIS Geometric Network, including connectivity relationships between edges and junction elements.
 
 <p align="center">
-  <img src="./assets/01-geometric-network-view.jpg" width="1000">
+  <img src="assets/01-geometric-network-view.jpg?raw=true" width="1000"/>
 </p>
 
 ---
 
-## ⚡ BUILDERR Validation Table
+# ⚡ BUILDERR Validation Table
+
+Connectivity validation results generated from BUILDERR, showing disconnected features, orphan elements and topology correction workflows.
 
 <p align="center">
-  <img src="./assets/02-builder-table.jpg" width="1000">
+  <img src="assets/02-builder-table.jpg?raw=true" width="1000"/>
 </p>
 
 ---
