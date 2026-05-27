@@ -9,98 +9,94 @@
 </p>
 
 <p align="center">
-Modelado, edición y validación de una red eléctrica en entorno GIS.<br>
-Geometric Network, análisis de conectividad, control de calidad y normalización de datos.
+GIS workflow focused on electrical network modeling, connectivity validation, topology QA/QC and Geometric Network analysis using ArcGIS.
 </p>
 
 ---
 
-## 📌 Descripción del proyecto
+# 📌 Project Overview
 
-Este proyecto abarca el modelado integral de una red eléctrica en ArcGIS, desde la estructuración del modelo de datos hasta la validación topológica y el control de calidad de la información espacial.
+This project demonstrates the complete GIS workflow for electrical network modeling using ArcGIS and Geometric Network.
 
-El trabajo incluyó la construcción y mantenimiento de una **Geometric Network** con múltiples clases de entidades, la edición de geometría y atributos, la identificación y corrección de errores de conectividad, y la normalización de nomenclaturas.
+The work includes:
+
+- Electrical network spatial modeling
+- Geometric Network construction
+- Connectivity validation
+- Topology analysis
+- Spatial QA/QC
+- Attribute normalization
+- Error detection and correction
+- GIS data management and validation
 
 ---
 
-# 🖼️ Capturas del proyecto
+# 🖼️ Project Screenshots
 
-## 🔌 Vista general de la red eléctrica
+## 🔌 Geometric Network Overview
 
 <p align="center">
-  <img src="assets/screenshots/network-overview.svg" width="1000"/>
+  <img src="assets/01-geometric-network-view.svg" width="1000"/>
 </p>
 
 ---
 
-## ⚡ Validación de conectividad
+## ⚡ BUILDERR Validation Table
 
 <p align="center">
-  <img src="assets/screenshots/connectivity-analysis.svg" width="1000"/>
+  <img src="assets/02-builder-table.svg" width="1000"/>
 </p>
 
 ---
 
-## 🧭 Control topológico y QA/QC
+# 🗂️ Data Model Components
 
-<p align="center">
-  <img src="assets/screenshots/topology-validation.svg" width="1000"/>
-</p>
-
----
-
-## 🗂️ Componentes del modelo de datos
-
-| Feature Class | Tipo | Rol en la red |
+| Feature Class | Geometry Type | Network Role |
 |---|---|---|
-| Líneas Eléctricas (LE) | Polyline | Edge — tramo de conducción |
-| Subestaciones / Estaciones | Point | Junction — nodo principal |
-| Reconectadores | Point | Junction — protección de red |
-| Seccionadores | Point | Junction — maniobra y aislamiento |
-| Seccionalizadores | Point | Junction — seccionalización automática |
-| Bancos de Capacitores | Point | Junction — compensación reactiva |
-| Puntos de Transformación | Point | Junction — cambio de tensión |
+| Electrical Lines (LE) | Polyline | Edge |
+| Substations | Point | Junction |
+| Reclosers | Point | Junction |
+| Switches | Point | Junction |
+| Sectionalizers | Point | Junction |
+| Capacitor Banks | Point | Junction |
+| Transformation Points | Point | Junction |
 
-> Todas las capas se organizan en un **Feature Dataset** dentro de una File Geodatabase (`.gdb`), con sistema de coordenadas proyectado compartido (UTM).
+> All feature classes are stored inside a Feature Dataset within a File Geodatabase (.gdb) using a shared projected coordinate system.
 
 ---
 
-## ⚙️ Flujo de trabajo
+# ⚙️ Workflow
 
 ```text
-Datos fuente (tablas, CAD, relevamiento de campo)
+Source Data
+(CAD / field survey / tables)
         │
         ▼
 ┌─────────────────────┐
-│  Edición geométrica │  ← Trazado de LE, posición de equipos,
-│  y de atributos     │    snap a vértices, ajuste de traza
+│ Geometry Editing    │
+│ Attribute Editing   │
 └────────┬────────────┘
          │
          ▼
 ┌─────────────────────┐
-│  Creación de        │  ← Feature Dataset + Geometric Network
-│  Geometric Network  │    Definición de Edges y Junctions
+│ Geometric Network   │
+│ Construction        │
 └────────┬────────────┘
          │
          ▼
 ┌─────────────────────┐
-│  Validación de      │  ← Find Disconnected Features
-│  conectividad       │    Tabla BUILDERR (ErrorType 11, 12, 16)
+│ Connectivity        │
+│ Validation          │
 └────────┬────────────┘
          │
          ▼
 ┌─────────────────────┐
-│  Control de calidad │  ← Geometría, atributos, nomenclatura,
-│  de datos           │    consistencia topológica
+│ QA / QC             │
+│ Spatial Validation  │
 └────────┬────────────┘
          │
          ▼
 ┌─────────────────────┐
-│  Normalización y    │  ← Estandarización de campos, resolución
-│  entrega final      │    de inconsistencias, actualización GIS
+│ Final GIS Delivery  │
+│ Data Standardization│
 └─────────────────────┘
-
-**Denise Hernández**  
-GIS Analyst | Spatial Data | Network Analysis  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/denise-hern%C3%A1ndez-a3071968/)
-[![Portfolio](https://img.shields.io/badge/Portafolio%20Notion-000000?style=flat&logo=notion&logoColor=white)](https://quickest-stream-2d8.notion.site/Portafolio-GIS-Denise-Hern%C3%A1ndez-3069dd2d2c5781cd9539e5bdc0ba14fe?pvs=74)
